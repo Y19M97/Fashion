@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;300;400;500;600;700&display=swap');
+
+:root {
+    --main-color: #f95959;
+    --bg-dark: #233142;
+    --bg-light: #ececec;
+    --transition: .7s;
+}
+
+/* html {
+    font-size: 40px;
+} */
+
+
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+    margin: 1rem 0;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 2rem;
+
+}
+
+
+body {
+    font-family: 'Montserrat Alternates', sans-serif;
+
+}
+li {
+    list-style: none;
+}
+
+.nav-link {
+    font-weight: bold;
+    color: #fff !important;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--main-color) !important;
+}
+
+.navbar-brand {
+    letter-spacing: -2px;
+}
+
+.navbar-brand,
+.active {
+    color: var(--main-color) !important;
+}
+
+/* Start banner  */
+.banner {
+    background-image: url(../img/bg.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.welcome-msg {
+
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.welcome-msg span {
+    color: var(--main-color);
+}
+
+.social-media i {
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.social-media i:hover {
+    color: var(--main-color);
+    transform: rotateY(360deg);
+}
+
+
+/* start service  */
+.service-caption h3::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: -4px;
+    background-color: var(--main-color);
+}
+
+.service-caption h3::before {
+    content: 'service';
+    text-transform: uppercase;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -43%;
+    bottom: -64%;
+    transform: translate(15%, -90%);
+    color: rgba(0, 0, 0, 0.2);
+    font-size: 40px;
+}
+
+img {
+    height: 600px;
+    cursor: pointer;
+}
+
+.service-fashions .item:hover.item::after {
+    top: 0;
+}
+
+.service-fashions .item::after {
+    content: '';
+    background-color: rgba(0, 0, 0, .6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transition: var(--transition);
+}
+
+.item-caption {
+    left: 100% !important;
+    z-index: 1;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.service-fashions .item:hover .item-caption {
+    opacity: 1;
+    left: 50% !important;
+}
+
+/* start footer  */
+footer span {
+    color: var(--main-color);
+}
